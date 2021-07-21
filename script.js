@@ -3,12 +3,13 @@ document.querySelector('.busca').addEventListener('submit', async event => {
   let input = document.querySelector('#searchInput').value
 
   if (input !== '') {
+    const OpenWeather = 'fe68e82c13fb265aa0a6c7f5e0ffb2e5'
     clearInfo()
     showWarning('carregando...')
     let url = `
     https://api.openweathermap.org/data/2.5/weather?q=${encodeURI(
       input,
-    )}&appid=fe68e82c13fb265aa0a6c7f5e0ffb2e5&units=metric&lang=pt_br`
+    )}&appid=${OpenWeather}&units=metric&lang=pt_br`
 
     let results = await fetch(url)
     let json = await results.json()
