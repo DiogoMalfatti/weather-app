@@ -3,7 +3,7 @@ document.querySelector('.busca').addEventListener('submit', async event => {
   let input = document.querySelector('#searchInput').value
 
   if (input !== '') {
-    const OpenWeather = 'fe68e82c13fb265aa0a6c7f5e0ffb2e5'
+    const OpenWeather = '.env'
     clearInfo()
     showWarning('carregando...')
     let url = `
